@@ -76,13 +76,9 @@ function playRound(humanChoice, computerChoice){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice()
 
+playRound(humanSelection, computerSelection);
+
 
 //start new code for playing an entire game of rock paper scissors which is the best 3 out of 5 (total five rounds)
 //repeat the playRound code five times
 
-function playGame(){
-
-    
-}
-
-playGame()

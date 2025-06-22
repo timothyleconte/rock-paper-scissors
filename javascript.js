@@ -15,7 +15,7 @@ function getComputerChoice(){
     }
 }
 
-getComputerChoice()
+getComputerChoice();
 
 //prompt the player to enter their choice (rock, paper, scissors)
 //take their choice and turn it into a case-insensitive variable
@@ -33,10 +33,23 @@ function getHumanChoice(){
     }
 }
 
-getHumanChoice()
+getHumanChoice();
 
 //create score variables
 
 let humanScore = 0;
 let computerScore = 0;
+
+//create logic to play a single round of rock paper scissors
+//take the two players choices as arguments and output the winner using rock, paper, scissors rules
+//increment the winners score by 1
+
+function playRound(humanChoice, computerChoice){
+
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
 

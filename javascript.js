@@ -73,13 +73,30 @@ function playRound(humanChoice, computerChoice){
     console.log("Computer's score: ", computerScore);
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice()
-
-playRound(humanSelection, computerSelection);
-
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice()
 
 //start new code for playing an entire game of rock paper scissors which is the best 3 out of 5 (total five rounds)
-//repeat the playRound code five times to play the full game; keeping a running tally of the scores and declaring a winner to the
-//first person that reaches 3 points
+//repeat the playRound code five times to play the full game
+
+function playGame(){
+    playRound(getHumanChoice(),getComputerChoice());
+       playRound(getHumanChoice(),getComputerChoice());
+          playRound(getHumanChoice(),getComputerChoice());
+             playRound(getHumanChoice(),getComputerChoice());
+                playRound(getHumanChoice(),getComputerChoice());
+
+    if (humanScore && computerScore < 4){
+        console.log()
+    }else if (humanScore == 4){
+        console.log("You win! Refresh to play again!")
+    }else if (humanScore && computerScore == 2){
+        console.log("Tie game! Refresh to play again!")
+    }else{
+        console.log("You lose! Refresh to play again!")
+    }
+
+}
+
+playGame();
 

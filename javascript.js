@@ -1,5 +1,5 @@
 //assign a number to each option (rock, paper, scissors) 
-//have computer output 3 numbers at random
+//have computer output 1 of 3 numbers at random
 //display the chosen variable
 
 function getComputerChoice(){
@@ -34,3 +34,9 @@ function getHumanChoice(){
 }
 
 getHumanChoice()
+
+//create score variables
+
+let humanScore = 0;
+let computerScore = 0;
+

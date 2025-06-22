@@ -15,8 +15,6 @@ function getComputerChoice(){
     }
 }
 
-// getComputerChoice();
-
 //prompt the player to enter their choice (rock, paper, scissors)
 //take their choice and turn it into a case-insensitive variable
 
@@ -33,8 +31,6 @@ function getHumanChoice(){
     }
 }
 
-// getHumanChoice();
-
 //create score variables
 
 let humanScore = 0;
@@ -42,31 +38,42 @@ let computerScore = 0;
 
 //create logic to play a single round of rock paper scissors
 //take the two players choices as arguments and output the winner using rock, paper, scissors rules
-//take the winner of the playRound and increment their score by 1
+//take the winner of the playRound and increment their score by 1; display scoreboard
 
 function playRound(humanChoice, computerChoice){
 
+
     if (humanChoice == "rock" && computerChoice == "rock"){
-        console.log("Tie! Rock vs Rock")
+        console.log("Tie! Rock vs Rock");
     }else if (humanChoice == "paper" && computerChoice == "paper"){
-        console.log("Tie! Paper vs Paper")
+        console.log("Tie! Paper vs Paper");
     }else if (humanChoice == "scissors" && computerChoice == "scissors"){
-        console.log("Tie! Scissors vs Scissors")
+        console.log("Tie! Scissors vs Scissors");
     }else if (humanChoice == "rock" && computerChoice == "scissors"){
-        console.log("You win that round! Rock smashes scissors!")
+        console.log("You win that round! Rock smashes scissors!");
+        humanScore++;
     }else if (humanChoice == "rock" && computerChoice == "paper"){
-        console.log("You lose that round! Paper covers rock!")
+        console.log("You lose that round! Paper covers rock!");
+        computerScore++
     }else if (humanChoice == "scissors" && computerChoice == "rock"){
-        console.log("You lose that round! Rock smashes scissors")
+        console.log("You lose that round! Rock smashes scissors");
+        computerScore++;
     }else if (humanChoice == "scissors" && computerChoice == "paper"){
-        console.log("You win that round! Scissors cut paper!")
+        console.log("You win that round! Scissors cut paper!");
+        humanScore++;
     }else if (humanChoice == "paper" && computerChoice == "rock"){
-        console.log("You win that round! Paper covers rock!")
+        console.log("You win that round! Paper covers rock!");
+        humanScore++;
     }else{
         console.log("You lose that round! Scissors cut paper!" )
-    }
+        computerScore++;
+     }
 
+    console.log("Your score: ", humanScore);
+    console.log("Computer's score: ", computerScore);
 }
+
+
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();

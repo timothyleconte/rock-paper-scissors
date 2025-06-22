@@ -45,16 +45,10 @@ function playRound(humanChoice, computerChoice){
 
     if (humanChoice == "rock" && computerChoice == "rock"){
         console.log("Tie! Rock vs Rock");
-        humanScore++;
-        computerScore++;
     }else if (humanChoice == "paper" && computerChoice == "paper"){
         console.log("Tie! Paper vs Paper");
-        humanScore++;
-        computerScore++;
     }else if (humanChoice == "scissors" && computerChoice == "scissors"){
         console.log("Tie! Scissors vs Scissors");
-        humanScore++;
-        computerScore++;
     }else if (humanChoice == "rock" && computerChoice == "scissors"){
         console.log("You win that round! Rock smashes scissors!");
         humanScore++;

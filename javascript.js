@@ -42,7 +42,7 @@ let computerScore = 0;
 
 //create logic to play a single round of rock paper scissors
 //take the two players choices as arguments and output the winner using rock, paper, scissors rules
-//increment the winners score by 1
+//take the winner of the playRound and increment their score by 1
 
 function playRound(humanChoice, computerChoice){
 
@@ -53,17 +53,17 @@ function playRound(humanChoice, computerChoice){
     }else if (humanChoice == "scissors" && computerChoice == "scissors"){
         console.log("Tie! Scissors vs Scissors")
     }else if (humanChoice == "rock" && computerChoice == "scissors"){
-        console.log("You win! Rock smashes scissors!")
+        console.log("You win that round! Rock smashes scissors!")
     }else if (humanChoice == "rock" && computerChoice == "paper"){
-        console.log("You lose! Paper covers rock!")
+        console.log("You lose that round! Paper covers rock!")
     }else if (humanChoice == "scissors" && computerChoice == "rock"){
-        console.log("You lose! Rock smashes scissors")
+        console.log("You lose that round! Rock smashes scissors")
     }else if (humanChoice == "scissors" && computerChoice == "paper"){
-        console.log("You win! Scissors cut paper!")
+        console.log("You win that round! Scissors cut paper!")
     }else if (humanChoice == "paper" && computerChoice == "rock"){
-        console.log("You win! Paper covers rock!")
+        console.log("You win that round! Paper covers rock!")
     }else{
-        console.log("You lose! Scissors cut paper!" )
+        console.log("You lose that round! Scissors cut paper!" )
     }
 
 }

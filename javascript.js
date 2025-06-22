@@ -45,10 +45,16 @@ function playRound(humanChoice, computerChoice){
 
     if (humanChoice == "rock" && computerChoice == "rock"){
         console.log("Tie! Rock vs Rock");
+        humanScore++;
+        computerScore++;
     }else if (humanChoice == "paper" && computerChoice == "paper"){
         console.log("Tie! Paper vs Paper");
+        humanScore++;
+        computerScore++;
     }else if (humanChoice == "scissors" && computerChoice == "scissors"){
         console.log("Tie! Scissors vs Scissors");
+        humanScore++;
+        computerScore++;
     }else if (humanChoice == "rock" && computerChoice == "scissors"){
         console.log("You win that round! Rock smashes scissors!");
         humanScore++;
@@ -73,11 +79,11 @@ function playRound(humanChoice, computerChoice){
     console.log("Computer's score: ", computerScore);
 }
 
-// const humanSelection = getHumanChoice();
+// const humanSelection = getHumanChoice(); <--decided not to use these
 // const computerSelection = getComputerChoice()
 
 //start new code for playing an entire game of rock paper scissors which is the best 3 out of 5 (total five rounds)
-//repeat the playRound code five times to play the full game
+//repeat the playRound code five times to play the full game and end with a winning/losing message
 
 function playGame(){
     playRound(getHumanChoice(),getComputerChoice());
@@ -86,14 +92,12 @@ function playGame(){
              playRound(getHumanChoice(),getComputerChoice());
                 playRound(getHumanChoice(),getComputerChoice());
 
-    if (humanScore && computerScore < 4){
-        console.log()
-    }else if (humanScore == 4){
-        console.log("You win! Refresh to play again!")
-    }else if (humanScore && computerScore == 2){
-        console.log("Tie game! Refresh to play again!")
+    if (humanScore > computerScore){
+        console.log("You win! Congratulations - free beers on the computer! Refresh to play again!");
+    }else if (computerScore > humanScore){
+        console.log("You lose! Sorry - buy the computer a beer! Refresh to play again!");
     }else{
-        console.log("You lose! Refresh to play again!")
+        console.log("You tied the computer -- refresh to try again!")
     }
 
 }

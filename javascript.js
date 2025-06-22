@@ -16,3 +16,21 @@ function getComputerChoice(){
 }
 
 getComputerChoice()
+
+//prompt the player to enter their choice (rock, paper, scissors)
+//take their choice and turn it into a case-insensitive variable
+
+function getHumanChoice(){
+    
+    let a = prompt("rock, paper, or scissors?").toLowerCase();
+
+    if (a == "rock"){
+        console.log("rock");
+    }else if (a == "paper"){
+        console.log("paper");
+    }else {
+        console.log("scissors");
+    }
+}
+
+getHumanChoice()

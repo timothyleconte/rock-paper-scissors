@@ -80,5 +80,6 @@ playRound(humanSelection, computerSelection);
 
 
 //start new code for playing an entire game of rock paper scissors which is the best 3 out of 5 (total five rounds)
-//repeat the playRound code five times
+//repeat the playRound code five times to play the full game; keeping a running tally of the scores and declaring a winner to the
+//first person that reaches 3 points
 

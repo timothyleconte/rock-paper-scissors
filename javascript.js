@@ -7,15 +7,15 @@ function getComputerChoice(){
     let a = Math.floor(Math.random() * 3);
 
     if (a == 0) {
-        console.log("rock");
+        return("rock");
     } else if (a == 1) {
-        console.log("paper")
-    } else {console.log("scissors");
+        return("paper")
+    } else {return("scissors");
 
     }
 }
 
-getComputerChoice();
+// getComputerChoice();
 
 //prompt the player to enter their choice (rock, paper, scissors)
 //take their choice and turn it into a case-insensitive variable
@@ -25,15 +25,15 @@ function getHumanChoice(){
     let a = prompt("rock, paper, or scissors?").toLowerCase();
 
     if (a == "rock"){
-        console.log("rock");
+        return("rock");
     }else if (a == "paper"){
-        console.log("paper");
+        return("paper");
     }else {
-        console.log("scissors");
+        return("scissors");
     }
 }
 
-getHumanChoice();
+// getHumanChoice();
 
 //create score variables
 
@@ -45,6 +45,26 @@ let computerScore = 0;
 //increment the winners score by 1
 
 function playRound(humanChoice, computerChoice){
+
+    if (humanChoice == "rock" && computerChoice == "rock"){
+        console.log("Tie! Rock vs Rock")
+    }else if (humanChoice == "paper" && computerChoice == "paper"){
+        console.log("Tie! Paper vs Paper")
+    }else if (humanChoice == "scissors" && computerChoice == "scissors"){
+        console.log("Tie! Scissors vs Scissors")
+    }else if (humanChoice == "rock" && computerChoice == "scissors"){
+        console.log("You win! Rock smashes scissors!")
+    }else if (humanChoice == "rock" && computerChoice == "paper"){
+        console.log("You lose! Paper covers rock!")
+    }else if (humanChoice == "scissors" && computerChoice == "rock"){
+        console.log("You lose! Rock smashes scissors")
+    }else if (humanChoice == "scissors" && computerChoice == "paper"){
+        console.log("You win! Scissors cut paper!")
+    }else if (humanChoice == "paper" && computerChoice == "rock"){
+        console.log("You win! Paper covers rock!")
+    }else{
+        console.log("You lose! Scissors cut paper!" )
+    }
 
 }
 

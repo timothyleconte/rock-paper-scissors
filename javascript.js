@@ -78,6 +78,14 @@ function playRound(humanChoice, computerChoice){
 
     humScore.textContent = `Your score: ${humanScore}`;
     compScore.textContent = `Computer's score: ${computerScore}`;
+
+    if (humanScore === 5 && computerScore === 5){
+        results.textContent = "You tied the computer! Try again.";
+    }else if (humanScore === 5 && computerScore < 5){
+        results.textContent = "You win! Congratulations - the computer owes you a beer!";
+    }else if (computerScore === 5 && humanScore < 5){
+        results.textContent = "You lose! Sorry - buy the computer a beer!"
+    }
 }
 
 

@@ -96,5 +96,5 @@ function playGame(){
 
 }
 
-playGame();
+// playGame();
 

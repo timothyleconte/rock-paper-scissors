@@ -81,11 +81,18 @@ function playRound(humanChoice, computerChoice){
 
     if (humanScore === 5 && computerScore === 5){
         results.textContent = "You tied the computer! Try again.";
+        humanScore = 0;
+        computerScore = 0;
     }else if (humanScore === 5 && computerScore < 5){
         results.textContent = "You win! Congratulations - the computer owes you a beer!";
+        humanScore = 0;
+        computerScore = 0;
     }else if (computerScore === 5 && humanScore < 5){
         results.textContent = "You lose! Sorry - buy the computer a beer!"
+        humanScore = 0;
+        computerScore = 0;
     }
+
 }
 
 

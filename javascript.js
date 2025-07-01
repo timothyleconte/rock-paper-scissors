@@ -73,28 +73,48 @@ function playRound(humanChoice, computerChoice){
     console.log("Computer's score: ", computerScore);
 }
 
-// const humanSelection = getHumanChoice(); <--decided not to use these
-// const computerSelection = getComputerChoice()
-
 //start new code for playing an entire game of rock paper scissors which is the best 3 out of 5 (total five rounds)
 //repeat the playRound code five times to play the full game and end with a winning/losing message
 
-function playGame(){
-    playRound(getHumanChoice(),getComputerChoice());
-       playRound(getHumanChoice(),getComputerChoice());
-          playRound(getHumanChoice(),getComputerChoice());
-             playRound(getHumanChoice(),getComputerChoice());
-                playRound(getHumanChoice(),getComputerChoice());
+// function playGame(){
+//     playRound(getHumanChoice(),getComputerChoice());
+//        playRound(getHumanChoice(),getComputerChoice());
+//           playRound(getHumanChoice(),getComputerChoice());
+//              playRound(getHumanChoice(),getComputerChoice());
+//                 playRound(getHumanChoice(),getComputerChoice());
 
-    if (humanScore > computerScore){
-        console.log("You win! Congratulations - free beers on the computer! Refresh to play again!");
-    }else if (computerScore > humanScore){
-        console.log("You lose! Sorry - buy the computer a beer! Refresh to play again!");
-    }else{
-        console.log("You tied the computer -- refresh to try again!")
-    }
+//     if (humanScore > computerScore){
+//         console.log("You win! Congratulations - free beers on the computer! Refresh to play again!");
+//     }else if (computerScore > humanScore){
+//         console.log("You lose! Sorry - buy the computer a beer! Refresh to play again!");
+//     }else{
+//         console.log("You tied the computer -- refresh to try again!")
+//     }
 
-}
+// }
 
-// playGame();
 
+
+const rockButton = document.querySelector("#rock");
+
+rockButton.addEventListener("click",() => {
+
+    playRound("rock", getComputerChoice());
+
+});
+
+const paperButton = document.querySelector("#paper");
+
+paperButton.addEventListener("click", () => {
+
+    playRound("paper", getComputerChoice());
+
+})
+
+const scissorsButton = document.querySelector ("#scissors");
+
+scissorsButton.addEventListener("click", () => {
+
+    playRound("scissors", getComputerChoice());
+
+})

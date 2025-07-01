@@ -55,10 +55,12 @@ function playRound(humanChoice, computerChoice){
     compScore.textContent = `Computer's score: ${computerScore}`;
 
     if (humanScore === 5){
+        results.style.color = "green";
         results.textContent = "You win! Congratulations - the computer owes you a beer!";
         humanScore = 0;
         computerScore = 0;
     }else if (computerScore === 5){
+        results.style.color = "red";
         results.textContent = "You lose! Sorry - buy the computer a beer!"
         humanScore = 0;
         computerScore = 0;

@@ -18,18 +18,18 @@ function getComputerChoice(){
 //prompt the player to enter their choice (rock, paper, scissors)
 //take their choice and turn it into a case-insensitive variable
 
-function getHumanChoice(){
+// function getHumanChoice(){
     
-    let a = prompt("rock, paper, or scissors?").toLowerCase();
+//     let a = prompt("rock, paper, or scissors?").toLowerCase();
 
-    if (a == "rock"){
-        return("rock");
-    }else if (a == "paper"){
-        return("paper");
-    }else {
-        return("scissors");
-    }
-}
+//     if (a == "rock"){
+//         return("rock");
+//     }else if (a == "paper"){
+//         return("paper");
+//     }else {
+//         return("scissors");
+//     }
+// }
 
 //create score variables
 
@@ -40,38 +40,46 @@ let computerScore = 0;
 //take the two players choices as arguments and output the winner using rock, paper, scissors rules
 //take the winner of the playRound and increment their score by 1; display scoreboard
 
+
+
 function playRound(humanChoice, computerChoice){
+
+    const results = document.querySelector(".results");
+    const humScore  = document.querySelector(".humScore");
+    const compScore = document.querySelector(".compScore");
 
 
     if (humanChoice == "rock" && computerChoice == "rock"){
-        console.log("Tie! Rock vs Rock");
+        results.textContent = "Tie! Rock vs Rock";
     }else if (humanChoice == "paper" && computerChoice == "paper"){
-        console.log("Tie! Paper vs Paper");
+        results.textContent = "Tie! Paper vs Paper";
     }else if (humanChoice == "scissors" && computerChoice == "scissors"){
-        console.log("Tie! Scissors vs Scissors");
+        results.textContent = "Tie! Scissors vs Scissors";
     }else if (humanChoice == "rock" && computerChoice == "scissors"){
-        console.log("You win that round! Rock smashes scissors!");
+        results.textContent = "You win that round! Rock smashes scissors!";
         humanScore++;
     }else if (humanChoice == "rock" && computerChoice == "paper"){
-        console.log("You lose that round! Paper covers rock!");
+        results.textContent = "You lose that round! Paper covers rock!";
         computerScore++
     }else if (humanChoice == "scissors" && computerChoice == "rock"){
-        console.log("You lose that round! Rock smashes scissors");
+        results.textContent = "You lose that round! Rock smashes scissors";
         computerScore++;
     }else if (humanChoice == "scissors" && computerChoice == "paper"){
-        console.log("You win that round! Scissors cut paper!");
+        results.textContent = "You win that round! Scissors cut paper!";
         humanScore++;
     }else if (humanChoice == "paper" && computerChoice == "rock"){
-        console.log("You win that round! Paper covers rock!");
+        results.textContent = "You win that round! Paper covers rock!";
         humanScore++;
     }else{
-        console.log("You lose that round! Scissors cut paper!" )
+        results.textContent = "You lose that round! Scissors cut paper!";
         computerScore++;
      }
 
-    console.log("Your score: ", humanScore);
-    console.log("Computer's score: ", computerScore);
+
+    humScore.textContent = `Your score: ${humanScore}`;
+    compScore.textContent = `Computer's score: ${computerScore}`;
 }
+
 
 //start new code for playing an entire game of rock paper scissors which is the best 3 out of 5 (total five rounds)
 //repeat the playRound code five times to play the full game and end with a winning/losing message

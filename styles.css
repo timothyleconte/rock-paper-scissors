@@ -8,4 +8,15 @@
 
 .buttons{
     text-align: center;
+    margin: 2em;
+}
+
+.results{
+    text-align: center;
+    margin: 2em;
+}
+
+.humScore, .compScore{
+    text-align: center;
+    margin: 1em;
 }

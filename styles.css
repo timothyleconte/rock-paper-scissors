@@ -25,3 +25,14 @@ button{
     font-weight: bold;
     margin: 0.5em;
 }
+
+img{
+    height: 300px;
+    width: auto;
+}
+
+.imageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

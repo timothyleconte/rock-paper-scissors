@@ -7,3 +7,5 @@
 6-30-25 22:48 - Starting to work with the DOM to add a UI to the project. Feeling pretty confident but I'm sure it's going to be a challenge; hopefully I'll learn a lot.
 
 7-1-25 00:54 - project complete. Surprisingly I didn't struggle that much. I had a few syntax issues that I was able to work out myself. I'm really happy with how it turned out; keeping the UI basic for now. Maybe I will mess around with it in the future and make it cooler for some more practice. For now, on to more learning!
+
+7-1-25 22:24 - So after I pushed it to github and played around with the deployment I realized that once the text color for the winner was declared and a new game started that text color remained. I went back in and fixed the colors so that they're correct now. My girlfriend also pointed out that on mobile the buttons were small and very close together so I adjusted the size, weight, and margins. Happy with this simple UI and I truly enjoyed the coding of this. I can't wait for more!
